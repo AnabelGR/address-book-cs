@@ -11,15 +11,17 @@ namespace AddressBook.Objects
     private int _phoneNumber;
     private string _email;
     private Address _addressInfo;
+    private Detail _detailInfo;
     private static List<Contact> _instances = new List<Contact> {};
 
-    public Contact(string name, int phoneNumber, string email, Address addressInfo)
+    public Contact(string name, int phoneNumber, string email, Address addressInfo, Detail detailInfo)
     {
       _id = _instances.Count;
       _name = name;
       _phoneNumber = phoneNumber;
       _email = email;
       _addressInfo = addressInfo;
+      _detailInfo = detailInfo;
       _instances.Add(this);
     }
     public int GetId()
@@ -57,6 +59,14 @@ namespace AddressBook.Objects
     public void SetAddressInfo(Address newAddressInfo)
     {
       _addressInfo = newAddressInfo;
+    }
+    public Detail GetDetailInfo()
+    {
+      return _detailInfo;
+    }
+    public void SetDetailInfo(Detail newDetailInfo)
+    {
+      _detailInfo = newDetailInfo;
     }
 
 

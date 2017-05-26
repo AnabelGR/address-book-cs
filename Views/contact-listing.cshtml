@@ -6,10 +6,19 @@
 <ul>
   <li>Phone Number: @Model.GetPhoneNumber()</li>
   <li>Email: @Model.GetEmail()</li>
+</ul>
+<h3>Address:</h3>
+<ul>
   <li>Address: @Model.GetAddressInfo().GetAddress()</li>
   <li>City: @Model.GetAddressInfo().GetCity()</li>
   <li>State: @Model.GetAddressInfo().GetState()</li>
   <li>Zip Code: @Model.GetAddressInfo().GetZipCode()</li>
+</ul>
+<h3>Details:</h3>
+<ul>
+  <li>Birthday: @Model.GetDetailInfo().GetBirthday()</li>
+  <li>Anniversary: @Model.GetDetailInfo().GetAnniversary()</li>
+  <li>Notes: @Model.GetDetailInfo().GetNotes()</li>
 </ul>
 <form action="/contacts/@Model.GetId()" method="post">
   <button class="btn" type="submit">Remove this contact.</button>
