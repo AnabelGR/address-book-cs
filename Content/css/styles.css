@@ -21,6 +21,20 @@ label {
   margin: 5px;
 }
 
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.index-name, .listing {
+  color: #FF9B42;
+}
+
+button {
+  color: #3C1518;
+  background-color: #FFD97D;
+  margin: 5px;
+}
+
 li {
   list-style-type: none;
 }

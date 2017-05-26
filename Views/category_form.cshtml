@@ -1,0 +1,12 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h1>Add a Contact Category</h1>
+<p>Add a contact category here:</p>
+<form action="/categories" method="post">
+  <label for="category-name">Category type:</label>
+  <input id="category-name" name="category-name" type="text">
+  <button type="submit" class="btn">Add</button>
+</form>
+<p><a href="/" class="btn">Back home</a></p>

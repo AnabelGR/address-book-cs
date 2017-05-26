@@ -2,20 +2,20 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-<h2>@Model.GetLastName(), @Model.GetFirstName() </h2>
+<h2 class="listing">@Model.GetLastName(), @Model.GetFirstName() </h2>
 <ul>
   <li>Full Name: @Model.GetFirstName() @Model.GetLastName() </li>
   <li>Phone Number: @Model.GetPhoneNumber()</li>
   <li>Email: @Model.GetEmail()</li>
 </ul>
-<h3>Address:</h3>
+<h3 class="listing">Address:</h3>
 <ul>
   <li>Address: @Model.GetAddressInfo().GetAddress()</li>
   <li>City: @Model.GetAddressInfo().GetCity()</li>
   <li>State: @Model.GetAddressInfo().GetState()</li>
   <li>Zip Code: @Model.GetAddressInfo().GetZipCode()</li>
 </ul>
-<h3>Details:</h3>
+<h3 class="listing">Details:</h3>
 <ul>
   <li>Birthday: @Model.GetDetailInfo().GetBirthday()</li>
   <li>Anniversary: @Model.GetDetailInfo().GetAnniversary()</li>

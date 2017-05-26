@@ -29,28 +29,45 @@ namespace AddressBook
         List<Contact> allContacts = Contact.GetAll();
         return View["index.cshtml", allContacts];
       };
-
-      // Get["/"] = _ => {
-      //    Dictionary<string, object> indexDict = new Dictionary <string, object> {{"genres", Genre.GetAll()}, {"cds", Cd.GetAll()}};
-      //    return View["index.cshtml", indexDict];
-      //  };
-      //  Get["/filter/"] = _ => {
-      //    Dictionary<string, object> indexDict = new Dictionary <string, object> {{"genres", Genre.GetAll()}, {"cds", Cd.GetAll()}, {"query", Genre.Find(int.Parse(Request.Query["genre"]))}};
-      //    return View["index.cshtml", indexDict];
-      //  };
-      //  Post["/genre/new"] = _ => {
-      //    Dictionary<string, object> indexDict = new Dictionary <string, object> {{"genres", Genre.GetAll()}, {"cds", Cd.GetAll()}};
-      //    Genre newGenre = new Genre(Request.Form["genre-name"]);
-      //    return View["index.cshtml", indexDict];
-      //  };
-      //  Post["/cd/new"] = _ => {
-      //    Dictionary<string, object> indexDict = new Dictionary <string, object> {{"genres", Genre.GetAll()}, {"cds", Cd.GetAll()}};
-
-
-
-
-
-
+      Get["/categories"] = _ => {
+        List<Category> allCategories = Category.GetAll();
+        return View["categories.cshtml", allCategories];
+      };
+      Get["/categories/new"] = _ => {
+        return View["category_form.cshtml"];
+      };
+      Post["/categories"] = _ => {
+       Category newCategory = new Category(Request.Form["category-name"]);
+        List<Category> allCategories = Category.GetAll();
+        return View["categories.cshtml", allCategories];
+      };
+      Get["/categories/{id}"] = parameters => {
+        Dictionary<string, object> model = new Dictionary<string, object>();
+        Category selectedCategory = Category.Find(parameters.id);
+        List<Contact> categoryContacts = selectedCategory.GetContacts();
+        model.Add("category", selectedCategory);
+        model.Add("contacts", categoryContacts);
+        return View["category.cshtml", model];
+      };
+      Get["/categories/{id}/contacts/new"] = parameters => {
+        Dictionary<string, object> model = new Dictionary<string, object>();
+        Category selectedCategory = Category.Find(parameters.id);
+        List<Contact> allContacts = selectedCategory.GetContacts();
+        model.Add("category", selectedCategory);
+        model.Add("contacts", allContacts);
+        return View["category-contact-form.cshtml", model];
+      };
+      Post["/contacts"] = _ => {
+        Dictionary<string, object> model = new Dictionary<string, object>();
+        Category selectedCategory = Category.Find(Request.Form["category-id"]);
+        List<Contact> categoryContacts = selectedCategory.GetContacts();
+        string lastName = Request.Form["lastName"];
+        Contact newContact = new Contact(lastName);
+        categoryContacts.Add(newContact);
+        model.Add("contacts", categoryContacts);
+        model.Add("category", selectedCategory);
+        return View["category.cshtml", model];
+      };
     }
   }
 }

@@ -78,8 +78,6 @@ namespace AddressBook.Objects
     {
       _detailInfo = newDetailInfo;
     }
-
-
     public static List<Contact> GetAll()
     {
       return _instances;
@@ -95,6 +93,10 @@ namespace AddressBook.Objects
     public static Contact SearchContacts(int searchId)
     {
       return _instances[searchId];
+    }
+    public static Contact Find(int searchId)
+    {
+      return _instances[searchId-1];
     }
     public void Remove()
     {
