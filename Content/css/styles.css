@@ -6,3 +6,8 @@ body {
 label {
   text-align: right;
 }
+
+.btn {
+  color: #FFD97D;
+  background-color: #3C1518;
+}

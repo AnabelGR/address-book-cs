@@ -12,13 +12,12 @@ namespace AddressBook.Objects
     private string _email;
     private static List<Contact> _instances = new List<Contact> {};
 
-
     public Contact(string name, int phoneNumber, string email)
     {
       _id = _instances.Count;
-      _name      = name;
+      _name = name;
       _phoneNumber = phoneNumber;
-      _email     = email;
+      _email = email;
 
       _instances.Add(this);
     }

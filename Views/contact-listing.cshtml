@@ -4,11 +4,10 @@
 
 <h2>@Model.GetName()</h2>
 <ul>
-  <li>Name: @Model.GetDescription()</li>
   <li>Phone Number: @Model.GetPhoneNumber()</li>
   <li>Email: @Model.GetEmail()</li>
 </ul>
 <form action="/contacts/@Model.GetId()" method="post">
-  <button type="submit">Remove this contact.</button>
+  <button class="btn" type="submit">Remove this contact.</button>
 </form>
-<p><a href="/">Return to Home Page</a></p>
+<p><a href="/" class="btn">Return to Home Page</a></p>
