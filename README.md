@@ -16,6 +16,9 @@ This web application creates an address book for saving contact details.
 | User views a contact's full information. | User clicks contact name in list on home page.  |  List of all inputted information for that contact appears as a different page. |
 | User deletes a contact. | User clicks delete contact. | Contact deleted. |
 | User clears all contact listings. | User clicks clear all contacts. | Contacts are cleared; returns a message confirming. |
+| User can create categories for contacts. | User clicks new category on the index page. | Returns a page with a field for the category name. |
+| User can see a list of current categories. | List populates. | Returns a page with category names listed. |
+| User can add a contact to a category. | click add contact button on category list page. | Returns a page with contact form under the category. |
 
 
 
@@ -34,7 +37,7 @@ Open the localhost target page the dnx kernel generates to view.
 
 ## Known Bugs
 
-* No known bugs.
+* Adding a contact through the category page is a broken link with a 500 error.
 
 
 ## Support and contact details

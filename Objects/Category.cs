@@ -19,7 +19,7 @@ namespace AddressBook.Objects
       _contacts = new List<Contact>{};
     }
 
-    public string GetCategoryName()
+    public string GetName()
     {
       return _name;
     }

@@ -61,8 +61,9 @@ namespace AddressBook
         Dictionary<string, object> model = new Dictionary<string, object>();
         Category selectedCategory = Category.Find(Request.Form["category-id"]);
         List<Contact> categoryContacts = selectedCategory.GetContacts();
-        string lastName = Request.Form["lastName"];
-        Contact newContact = new Contact(lastName);
+        Address newAddress = new Address(Request.Form["address"], Request.Form["city"], Request.Form["state"], Request.Form["zipCode"]);
+        Detail newDetail = new Detail(Request.Form["birthday"], Request.Form["anniversary"], Request.Form["notes"]);
+        Contact newContact = new Contact(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["email"], newAddress, newDetail);
         categoryContacts.Add(newContact);
         model.Add("contacts", categoryContacts);
         model.Add("category", selectedCategory);
