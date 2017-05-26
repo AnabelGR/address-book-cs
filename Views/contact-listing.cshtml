@@ -6,6 +6,10 @@
 <ul>
   <li>Phone Number: @Model.GetPhoneNumber()</li>
   <li>Email: @Model.GetEmail()</li>
+  <li>Address: @Model.GetAddressInfo().GetAddress()</li>
+  <li>City: @Model.GetAddressInfo().GetCity()</li>
+  <li>State: @Model.GetAddressInfo().GetState()</li>
+  <li>Zip Code: @Model.GetAddressInfo().GetZipCode()</li>
 </ul>
 <form action="/contacts/@Model.GetId()" method="post">
   <button class="btn" type="submit">Remove this contact.</button>
