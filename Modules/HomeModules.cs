@@ -13,7 +13,7 @@ namespace AddressBook
           Post["/"] = _ => {
             Address newAddress = new Address(Request.Form["address"], Request.Form["city"], Request.Form["state"], Request.Form["zipCode"]);
             Detail newDetail = new Detail(Request.Form["birthday"], Request.Form["anniversary"], Request.Form["notes"]);
-            Contact newContact = new Contact(Request.Form["name"],  Request.Form["phoneNumber"], Request.Form["email"], newAddress, newDetail);
+            Contact newContact = new Contact(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"], Request.Form["email"], newAddress, newDetail);
             return View["index.cshtml", Contact.GetAll()];
           };
       Post["/contacts/cleared"] = _ => {
@@ -29,6 +29,28 @@ namespace AddressBook
         List<Contact> allContacts = Contact.GetAll();
         return View["index.cshtml", allContacts];
       };
+
+      // Get["/"] = _ => {
+      //    Dictionary<string, object> indexDict = new Dictionary <string, object> {{"genres", Genre.GetAll()}, {"cds", Cd.GetAll()}};
+      //    return View["index.cshtml", indexDict];
+      //  };
+      //  Get["/filter/"] = _ => {
+      //    Dictionary<string, object> indexDict = new Dictionary <string, object> {{"genres", Genre.GetAll()}, {"cds", Cd.GetAll()}, {"query", Genre.Find(int.Parse(Request.Query["genre"]))}};
+      //    return View["index.cshtml", indexDict];
+      //  };
+      //  Post["/genre/new"] = _ => {
+      //    Dictionary<string, object> indexDict = new Dictionary <string, object> {{"genres", Genre.GetAll()}, {"cds", Cd.GetAll()}};
+      //    Genre newGenre = new Genre(Request.Form["genre-name"]);
+      //    return View["index.cshtml", indexDict];
+      //  };
+      //  Post["/cd/new"] = _ => {
+      //    Dictionary<string, object> indexDict = new Dictionary <string, object> {{"genres", Genre.GetAll()}, {"cds", Cd.GetAll()}};
+
+
+
+
+
+
     }
   }
 }

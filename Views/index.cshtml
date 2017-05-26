@@ -7,7 +7,7 @@
   <ul>
     @foreach(var posting in Model)
     {
-      <li><a href="/contacts/@posting.GetId()">@posting.GetName()</a></li>
+      <li><a href="/contacts/@posting.GetId()">@posting.GetFirstName() @posting.GetLastName()</a></li>
     }
   </ul>
 } else {

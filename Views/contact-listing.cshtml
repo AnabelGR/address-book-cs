@@ -2,8 +2,9 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-<h2>@Model.GetName()</h2>
+<h2>@Model.GetLastName(), @Model.GetFirstName() </h2>
 <ul>
+  <li>Full Name: @Model.GetFirstName() @Model.GetLastName() </li>
   <li>Phone Number: @Model.GetPhoneNumber()</li>
   <li>Email: @Model.GetEmail()</li>
 </ul>
@@ -21,6 +22,6 @@
   <li>Notes: @Model.GetDetailInfo().GetNotes()</li>
 </ul>
 <form action="/contacts/@Model.GetId()" method="post">
-  <button class="btn" type="submit">Remove this contact.</button>
+  <button class="btn" type="submit">Remove</button>
 </form>
-<p><a href="/" class="btn">Return to Home Page</a></p>
+<p><a href="/" class="btn">Return Home</a></p>

@@ -7,17 +7,19 @@ namespace AddressBook.Objects
   public class Contact
   {
     private int _id;
-    private string _name;
-    private int _phoneNumber;
+    private string _firstName;
+    private string _lastName;
+    private string _phoneNumber;
     private string _email;
     private Address _addressInfo;
     private Detail _detailInfo;
     private static List<Contact> _instances = new List<Contact> {};
 
-    public Contact(string name, int phoneNumber, string email, Address addressInfo, Detail detailInfo)
+    public Contact(string firstName, string lastName, string phoneNumber, string email, Address addressInfo, Detail detailInfo)
     {
       _id = _instances.Count;
-      _name = name;
+      _firstName = firstName;
+      _lastName = lastName;
       _phoneNumber = phoneNumber;
       _email = email;
       _addressInfo = addressInfo;
@@ -28,19 +30,27 @@ namespace AddressBook.Objects
     {
       return _id;
     }
-    public string GetName()
+    public string GetFirstName()
     {
-      return _name;
+      return _firstName;
     }
-    public void SetName(string newName)
+    public void SetFirstName(string newFirstName)
     {
-      _name = newName;
+      _firstName = newFirstName;
     }
-    public int GetPhoneNumber()
+    public string GetLastName()
+    {
+      return _lastName;
+    }
+    public void SetLastName(string newLastName)
+    {
+      _lastName = newLastName;
+    }
+    public string GetPhoneNumber()
     {
       return _phoneNumber;
     }
-    public void SetPhoneNumber(int newPhoneNumber)
+    public void SetPhoneNumber(string newPhoneNumber)
     {
       _phoneNumber = newPhoneNumber;
     }
