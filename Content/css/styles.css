@@ -5,33 +5,12 @@ body {
 
 }
 
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
 a, input, h1, h3, p, li {
   font-family: 'Oswald', sans-serif;
-}
-
-label {
-  text-align: right;
-}
-
-.btn {
-  color: #3C1518;
-  background-color: #FFD97D;
-  margin: 5px;
-}
-
-input[type="text"], input[type="tel"], input[type="number"], input[type="email"], input[type="date"] {
-  color: #FFD97D;
-  background-color: #FF9B42;
-  border: none;
-  color: white;
-}
-
-a:link, a:visited, a:hover, a:active {
-    text-decoration: none;
-}
-
-.index-name, .listing, .category-heading {
-  color: #FF9B42;
 }
 
 button {
@@ -40,8 +19,43 @@ button {
   margin: 5px;
 }
 
+input[type="text"], input[type="tel"], input[type="number"], input[type="email"], input[type="date"] {
+  color: black;
+  background-color: #FF9B42;
+  border: none;
+}
+
+input[type="date"] {
+  margin-top: 5px;
+}
+
+label {
+  text-align: right;
+}
+
+.jumbotron {
+  color: #3C1518;
+  background-color: #FFD97D;
+  height: 135px;
+}
+
+.jumbo-heading {
+  font-weight: 900;
+  text-align: right;
+}
+
 li {
   list-style-type: none;
+}
+
+.btn {
+  color: #3C1518;
+  background-color: #FFD97D;
+  margin: 5px;
+}
+
+.category-heading, .index-name, .listing {
+  color: #FF9B42;
 }
 
 .category {
