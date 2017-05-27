@@ -20,8 +20,6 @@ This web application creates an address book for saving contact details.
 | User can see a list of current categories. | List populates. | Returns a page with category names listed. |
 | User can add a contact to a category. | click add contact button on category list page. | Returns a page with contact form under the category. |
 
-
-
 ## Gh-pages
 
 Locate at: https://github.com/AnabelGR/address-book-cs/tree/gh-pages
@@ -39,7 +37,7 @@ Open the localhost target page the dnx kernel generates to view.
 
 ## Known Bugs
 
-* Adding a contact through the category page is a broken link with a 500 error.
+* No known bugs.
 
 
 ## Support and contact details
