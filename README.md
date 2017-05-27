@@ -24,6 +24,8 @@ This web application creates an address book for saving contact details.
 
 ## Gh-pages
 
+Locate at: https://github.com/AnabelGR/address-book-cs/tree/gh-pages
+
 ## Setup/Installation Requirements
 
 This project uses Razor and Nancy requiring a Windows operating system.
