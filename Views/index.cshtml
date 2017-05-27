@@ -13,11 +13,12 @@
     } else {
       <h2>Start adding your contacts.</h2>
     }
-
-<p><a href="/contacts/new" class="btn">Add a contact</a></p>
-  <h2>Contacts by Type:</h2>
-    <h3><a href='/categories' class="btn">View categories</a></h3>
-    <h3><a href='/categories/new' class="btn">Add a new category</a></h3>
-<form action="/contacts/cleared" method="post">
-  <button class="btn" type="submit" name="button">Clear All Contacts</button>
-</form>
+  <p><a href="/contacts/new" class="btn">Add a contact</a></p>
+  <form action="/contacts/cleared" method="post">
+    <button class="btn" type="submit" name="button">Clear All Contacts</button>
+  </form>
+<div class="category">
+  <h2>Contact Categories:</h2>
+  <h3><a href='/categories' class="btn">View categories</a></h3>
+  <h3><a href='/categories/new' class="btn">Add a new category</a></h3>
+</div>

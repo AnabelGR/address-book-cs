@@ -30,7 +30,7 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
-.index-name, .listing {
+.index-name, .listing, .category-heading {
   color: #FF9B42;
 }
 
@@ -42,4 +42,14 @@ button {
 
 li {
   list-style-type: none;
+}
+
+.category {
+  color: #FFD97D;
+  padding-left: 15px;
+  margin-top: 15px;
+  background-color: #3C1518;
+  border: 3px solid #FFD97D;
+  border-radius: 20px;
+  width: 250px;
 }

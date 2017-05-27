@@ -9,6 +9,6 @@
 }
 @foreach (var category in Model)
 {
-  <h3><a href='/categories/@category.GetId()'>@category.GetName()</a></h3>
+  <h3><a href='/categories/@category.GetId()' class="category-heading">@category.GetName()</a></h3>
 }
 <p><a href='/' class='btn'>Back home</a></p>

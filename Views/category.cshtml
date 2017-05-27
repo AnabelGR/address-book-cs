@@ -3,11 +3,11 @@
 }
 
 <h3>Here are all the contacts in this category:</h3>
-<ol>
-@foreach (var contact in @Model["contacts"])
-{
-  <li>@contact.GetLastName(), @contact.GetFirstName()</li>
-}
-</ol>
-<!-- <p><a href='/categories/@Model["category"].GetId()/contacts/new' class='btn'>Add a new contact.</a></p> -->
-<p><a href='/' class='btn'>Return to Main Page</a></p>
+  <ol>
+  @foreach (var contact in @Model["contacts"])
+  {
+    <li>@contact.GetLastName(), @contact.GetFirstName()</li>
+  }
+  </ol>
+  <p><a href='/categories/@Model["category"].GetId()/contacts/new' class='btn'>Add a new contact.</a></p>
+  <p><a href='/' class='btn'>Return to Main Page</a></p>
